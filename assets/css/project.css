@@ -1,0 +1,287 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Raleway:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0d0d0d;
+    color: #ffffff;
+    line-height: 1.6;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* --- Header --- */
+header {
+    background: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    background: linear-gradient(90deg, #00bcd4, #ff4081);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: slideIn 1.2s ease-in-out;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* --- Navigation --- */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 10px 15px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+nav ul li:nth-child(1) { animation-delay: 0.3s; }
+nav ul li:nth-child(2) { animation-delay: 0.5s; }
+nav ul li:nth-child(3) { animation-delay: 0.7s; }
+nav ul li:nth-child(4) { animation-delay: 0.9s; }
+
+nav ul li a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff4081;
+}
+
+/* --- Buttons with Animation --- */
+.buttons {
+    margin-top: 15px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards 1.2s;
+}
+
+.btn {
+    display: inline-block;
+    background: #00bcd4;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background: #ff4081;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    background: #ff1744;
+    transform: scale(0.95);
+}
+
+/* --- Sections with Fade-in Effects --- */
+.section {
+    padding: 40px 20px;
+    background: #1a1a1a;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+#about { animation-delay: 0.2s; }
+#skills { animation-delay: 0.4s; }
+#projects { animation-delay: 0.6s; }
+#contact { animation-delay: 0.8s; }
+
+/* --- Headings with Slide-in Animation --- */
+h2 {
+    font-size: 2.2rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #00bcd4, #ff4081);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: slideIn 1s ease-in-out forwards;
+}
+
+h2:nth-of-type(1) { animation-delay: 0.3s; }
+h2:nth-of-type(2) { animation-delay: 0.5s; }
+h2:nth-of-type(3) { animation-delay: 0.7s; }
+h2:nth-of-type(4) { animation-delay: 0.9s; }
+
+/* --- Projects Section --- */
+#projects {
+    background-color: #1a1a1a;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #00bcd4, #ff4081);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    text-align: center;
+    opacity: 0;
+    animation: slideIn 1s ease-in-out forwards;
+}
+
+/* --- Project Cards --- */
+.project-card {
+    background: #222222;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-in-out forwards;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+}
+
+.project-card h3 {
+    color: #00bcd4;
+    font-size: 1.8rem;
+}
+
+.project-card p {
+    font-size: 1.1rem;
+    color: #ddd;
+    opacity: 0.9;
+    margin-top: 10px;
+}
+
+.project-card a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+    color: #ff4081;
+}
+
+.project-card .project-button {
+    background: #00bcd4;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 15px;
+    font-size: 1rem;
+    display: inline-block;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.project-card .project-button:hover {
+    background: #ff4081;
+    transform: scale(1.05);
+}
+
+.project-card .project-button:active {
+    background: #ff1744;
+    transform: scale(0.95);
+}
+
+/* --- Image Size Adjustment for Projects Section --- */
+.project-card img {
+    width: 100%; /* Adjusts width to fit the card */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 300px; /* Sets a max-width for the image */
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* --- Responsive Design (Mobile-Friendly) --- */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 8px 0;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    #projects .project-card {
+        margin: 10px 0;
+    }
+
+    .project-card img {
+        max-width: 80%; /* Ensures the image fits well on smaller screens */
+    }
+}

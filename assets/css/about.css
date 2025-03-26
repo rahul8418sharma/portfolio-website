@@ -1,0 +1,310 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Raleway:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0d0d0d;
+    color: #ffffff;
+    line-height: 1.6;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* --- Header --- */
+header {
+    background: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    background: linear-gradient(90deg, #00bcd4, #ff4081);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: slideIn 1.2s ease-in-out;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* --- Navigation --- */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 10px 15px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+nav ul li:nth-child(1) { animation-delay: 0.3s; }
+nav ul li:nth-child(2) { animation-delay: 0.5s; }
+nav ul li:nth-child(3) { animation-delay: 0.7s; }
+nav ul li:nth-child(4) { animation-delay: 0.9s; }
+
+nav ul li a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff4081;
+}
+
+/* --- Buttons with Animation --- */
+.buttons {
+    margin-top: 15px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards 1.2s;
+}
+
+.btn {
+    display: inline-block;
+    background: #00bcd4;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background: #ff4081;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    background: #ff1744;
+    transform: scale(0.95);
+}
+
+/* --- Sections with Fade-in Effects --- */
+.section {
+    padding: 40px 20px;
+    background: #1a1a1a;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+#about { animation-delay: 0.2s; }
+#skills { animation-delay: 0.4s; }
+#projects { animation-delay: 0.6s; }
+#contact { animation-delay: 0.8s; }
+
+/* --- Headings with Slide-in Animation --- */
+h2 {
+    font-size: 2.2rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #00bcd4, #ff4081);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: slideIn 1s ease-in-out forwards;
+}
+
+h2:nth-of-type(1) { animation-delay: 0.3s; }
+h2:nth-of-type(2) { animation-delay: 0.5s; }
+h2:nth-of-type(3) { animation-delay: 0.7s; }
+h2:nth-of-type(4) { animation-delay: 0.9s; }
+
+/* --- About Section --- */
+#about {
+    background-color: #1a1a1a; /* Black background like Projects section */
+    color: #ffffff;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #00bcd4, #ff4081);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    text-align: center;
+    opacity: 0;
+    animation: slideIn 1s ease-in-out forwards;
+}
+
+#about .about-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+#about .about-content img {
+    border-radius: 50%; /* Circle image */
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid #00bcd4; /* Cyan border around the image */
+    transition: transform 0.3s ease;
+    margin-top: -20px;
+}
+
+#about .about-content img:hover {
+    transform: scale(1.1);
+}
+
+#about .about-text {
+    font-size: 1.2rem;
+    max-width: 600px;
+    text-align: left;
+    color: #ddd;
+}
+
+#about .about-text p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+#about .about-text h3 {
+    font-size: 1.8rem;
+    color: #00bcd4; /* Cyan for header */
+}
+
+#about .about-text a {
+    color: #00bcd4;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#about .about-text a:hover {
+    text-decoration: underline;
+    color: #ff4081;
+}
+
+#about .about-text a:visited {
+    color: #d500f9; /* Purple for visited links */
+}
+
+#about .about-text a[href^="mailto:"] {
+    color: #ff5722; /* Bright orange for email */
+}
+
+#about .about-text a[href^="mailto:"]:hover {
+    color: #ff784e;
+}
+
+#about .about-text a[href^="https://www.linkedin.com"] {
+    color: #0077b5; /* LinkedIn blue */
+}
+
+#about .about-text a[href^="https://www.linkedin.com"]:hover {
+    color: #0095d9; /* Lighter LinkedIn blue */
+}
+
+#about .go-home-btn {
+    background: #00bcd4;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: inline-block;
+    margin-top: 30px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#about .go-home-btn:hover {
+    background: #ff4081;
+    transform: scale(1.05);
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* --- Responsive Design (Mobile-Friendly) --- */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 8px 0;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    #about .about-content {
+        flex-direction: column;
+    }
+
+    #about .about-content img {
+        margin-bottom: 20px;
+    }
+}
